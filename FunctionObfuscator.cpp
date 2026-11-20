@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <windows.h>
 #include <cstdint>
@@ -50,6 +49,13 @@ private:
         brayan,
         brayan1
     };
+// The input is decoded by XORing it with the key (90 / 0x5A).
+// For 10 functions, valid decoded indices are 0 through 9:
+//
+//   Function index:  0  1  2  3  4  5  6  7  8  9
+//   Required input: 90 91 88 89 94 95 92 93 82 83
+//
+// Example: input 83 decodes to index 9, so the tenth function is called.
 
     bool Decode()
     {
